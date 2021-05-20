@@ -41,7 +41,7 @@ do
   esac
 done
 
-sudo pacman -S firefox filezilla terminator openssh gthumb vlc geary keepassxc gimp notepadqq htop neofetch fish
+sudo pacman -S firefox filezilla terminator openssh gthumb vlc geary keepassxc gimp notepadqq htop neofetch fish geary
 
 cd /tmp
 sudo git clone https://aur.archlinux.org/yay.git
