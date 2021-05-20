@@ -41,5 +41,5 @@ do
   esac
 done
 
-sudo pacman -S xorg xorg-server budgie-desktop
+sudo pacman -S xorg xorg-server #budgie-desktop
 yay -S budgie-desktop-git budgie-screensaver

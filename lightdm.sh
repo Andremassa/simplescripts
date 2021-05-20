@@ -41,8 +41,8 @@ do
   esac
 done
 
-yay -S lightdm
-sudo systemctl enable lightdm
+yay -S lightdm lightdm-gtk-greeter
+sudo systemctl enable lightdm.service
 
 clear
 # Start lighdm?
@@ -53,7 +53,7 @@ do
 
   case $exe2 in
     [yY][eE][sS]|[yY])
-      sudo systemctl start lightdm
+      sudo systemctl start lightdm.service
   ;;
     [nN][oO]|[nN])
       sleep 2
