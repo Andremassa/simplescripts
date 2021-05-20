@@ -41,13 +41,5 @@ do
   esac
 done
 
-sudo pacman -S firefox filezilla terminator openssh gthumb vlc geary keepassxc gimp notepadqq htop neofetch fish
-
-cd /tmp
-sudo git clone https://aur.archlinux.org/yay.git
-sudo chown -R $USER:users ./yay
-cd yay
-sleep 3
-makepkg -si
-sleep 3
-yay -S webapp-manager-git onlyoffice-bin
+sudo pacman -S xorg xorg-server budgie-desktop
+yay -S budgie-desktop-git

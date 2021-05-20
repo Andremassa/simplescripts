@@ -21,6 +21,7 @@ echo "  ⣿⣿⣿⠄⠄⠄⠘⣿⣿⣿⡆⢀⣈⣉⢉⣿⣿⣯⣄⡄⠄⠄⠄⠄
 echo "  ⣿⣿⡟⡜⠄⠄⠄⠄⠙⠿⣿⣧⣽⣍⣾⣿⠿⠛⠁⠄⠄⠄⠄⠄⠄⠄⠄⠃⢿⣿"
 echo "  ⣿⡿⠰⠄⠄⠄⠄⠄⠄⠄⠄⠈⠉⠩⠔⠒⠉⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠐⠘⣿"
 echo "  ⣿⠃⠃⠄⠄⠄⠄⠄⠄⣀⢀⠄⠄⡀⡀⢀⣤⣴⣤⣤⣀⣀⠄⠄⠄⠄⠄⠄⠁⢹"
+echo ""
 sleep 3
 
 # Execute Script?
@@ -43,14 +44,16 @@ done
 sudo pacman -S lightdm
 sudo systemctl enable lightdm
 
+clear
 # Start lighdm?
 while true
 do
+  echo ""
   read -r -p "Start lighdm? [Y/N] " exe2
 
   case $exe2 in
     [yY][eE][sS]|[yY])
-      sudo systemctl start lighdm
+      sudo systemctl start lightdm
   ;;
     [nN][oO]|[nN])
       sleep 2
