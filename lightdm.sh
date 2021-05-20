@@ -41,7 +41,7 @@ do
   esac
 done
 
-sudo pacman -S lightdm
+yay -S lightdm
 sudo systemctl enable lightdm
 
 clear

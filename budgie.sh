@@ -42,4 +42,4 @@ do
 done
 
 sudo pacman -S xorg xorg-server budgie-desktop
-yay -S budgie-desktop-git
+yay -S budgie-desktop-git budgie-screensaver
