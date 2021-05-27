@@ -54,7 +54,7 @@ whiptail --title "Packages" --checklist --separate-output \
 "neofetch" "Sys info" ON \
 "fish" "User Friendly Shell" OFF 2>packages
 
-sudo pacman -S $(cat ./packages) --needed --noconfirm
+sudo pacman -Syy $(cat ./packages) --needed --noconfirm
 
 if grep -Fxq "openssh" packages
 then
