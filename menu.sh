@@ -36,21 +36,17 @@ do
   \t███████║╚██████╗██║  ██║██║██║        ██║   ███████║
   \t╚══════╝ ╚═════╝╚═╝  ╚═╝╚═╝╚═╝        ╚═╝   ╚══════╝
   \e[0m"
-  read -r -p "        Ready? [Y/N] " exe1
+  read -r -p "        Ready? [Y/n] " exe1
   echo ""
 
   case $exe1 in
-    [yY][eE][sS]|[yY])
-      MENU1=1
-      export MENU1
-      break
-  ;;
     [nN][oO]|[nN])
       exit
   ;;
     *)
-      echo "        Type Y/yes or N/no"
-      sleep 2
+      MENU1=1
+      export MENU1
+      break
   esac
 done
 

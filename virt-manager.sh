@@ -41,7 +41,7 @@ do
   esac
 done
 
-sudo pacman -S virt-manager qemu qemu-arch-extra ovmf vde2 ebtables dnsmasq bridge-utils openbsd-netcat
+sudo pacman -S virt-manager qemu qemu-arch-extra ovmf vde2 ebtables dnsmasq bridge-utils openbsd-netcat libvirt
 
 echo '<network>
   <name>br10</name>
@@ -57,6 +57,9 @@ echo '<network>
     </dhcp>
   </ip>
 </network>' > br10.xml
+
+sudo systemctl enable libvirtd
+sudo systemctl start libvirtd
 
 sudo virsh net-define br10.xml
 sudo virsh net-start br10
